@@ -1,11 +1,13 @@
+import asyncio
 import wave
 from asyncio import Queue
-import asyncio
+
 import numpy as np
 
-from .base_output_device import BaseOutputDevice
-from vocode.streaming.models.audio_encoding import AudioEncoding
+from vocode.streaming.models.audio import AudioEncoding
 from vocode.streaming.utils.worker import ThreadAsyncWorker
+
+from .base_output_device import BaseOutputDevice
 
 
 class FileWriterWorker(ThreadAsyncWorker):
